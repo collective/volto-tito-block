@@ -14,34 +14,34 @@ msgstr ""
 #: components/Blocks/Tito/schema
 # defaultMessage: Discount Code
 msgid "Discount Code"
-msgstr ""
+msgstr "Código de desconto"
 
 #: components/Blocks/Tito/EditForm
 # defaultMessage: Embed a Ticket Form
 msgid "Embed a Ticket Form"
-msgstr ""
+msgstr "Adicione um formulário de venda de ingressos"
 
 #: components/Blocks/Tito/schema
 # defaultMessage: Event
 msgid "Event"
-msgstr ""
+msgstr "Evento"
 
 #: components/Blocks/Tito/EditForm
 # defaultMessage: Please provide a valid event id
 msgid "Please provide a valid event id"
-msgstr ""
+msgstr "Por favor informe um id de evento válido"
 
 #: components/Blocks/Tito/EditForm
 # defaultMessage: Provide the event i.e. plone/conference-2022
 msgid "Provide the event i.e. plone/conference-2022"
-msgstr ""
+msgstr "Informe o evento, por exemplo plone/conference-2022
 
 #: components/Blocks/Tito/schema
 # defaultMessage: Tickets
 msgid "Tickets"
-msgstr ""
+msgstr "Ingressos"
 
 #: components/Blocks/Tito/schema
 # defaultMessage: Tito
 msgid "Tito"
-msgstr ""
+msgstr "Tito"
