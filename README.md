@@ -1,13 +1,20 @@
-# Tito Block for Volto (@plone-collective/volto-tito-block)
+<div align="center"><img alt="logo" src="./docs/tito.svg" width="70" /></div>
+
+<h1 align="center">Tito Block for Volto</h1>
+
+This addon implements a block to integrate [Tito](https://ti.to/), a platform for selling tickets online, into [Plone](https://plone.org) projects with a [Volto](https://github.com/plone/volto) user interface. Currently this addon supports only the [Tito Widget V1](https://ti.to/docs/widget).
+
+<div align="center">
 
 [![npm](https://img.shields.io/npm/v/@plone-collective/volto-tito-block)](https://www.npmjs.com/package/@plone-collective/volto-tito-block)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://collective.github.io/volto-tito-block/)
 [![Code analysis checks](https://github.com/collective/volto-tito-block/actions/workflows/code.yml/badge.svg)](https://github.com/collective/volto-tito-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/collective/volto-tito-block/actions/workflows/unit.yml/badge.svg)](https://github.com/collective/volto-tito-block/actions/workflows/unit.yml)
 
-[Tito](https://ti.to/) is a platform for selling tickets online.
+[![GitHub contributors](https://img.shields.io/github/contributors/collective/volto-tito-block)](https://github.com/collective/volto-tito-block)
+[![GitHub Repo stars](https://img.shields.io/github/stars/collective/volto-tito-block?style=social)](https://github.com/collective/volto-tito-block)
 
-This addon implements a block integrating the [Tito Widget V1](https://ti.to/docs/widget) to [Plone](https://plone.org) projects with a [Volto](https://github.com/plone/volto) user interface.
+</div>
 
 ## Screenshots
 
