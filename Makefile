@@ -78,6 +78,17 @@ start-backend-docker:		## Starts a Docker-based backend
 	@echo "$(GREEN)==> Start Docker-based Plone Backend$(RESET)"
 	docker run -it --rm --name=plone -p 8080:8080 -e SITE=Plone plone/plone-backend:6.0.0a6
 
+# Release
+.PHONY: dry-release
+dry-release: ## Dry release this package
+	@echo "$(GREEN)==> Dry release the package$(RESET)"
+	@npx release-it --dry-run
+
+.PHONY: release
+release: ## Release this package
+	@echo "$(GREEN)==> Release the package$(RESET)"
+	@npx release-it
+
 .PHONY: help
 help:		## Show this help.
 	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
