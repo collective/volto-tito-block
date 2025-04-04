@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 
-import './tito.css';
+// import './tito.css';
 
 const loadTiTo = (callback) => {
   const widgetId = 'TiTo';
-  const scriptSrc = `https://js.tito.io/v1`;
+  const scriptSrc = `https://js.tito.io/v2`;
   const existingScript = document.getElementById(widgetId);
   if (existingScript && callback) {
     callback(true);
