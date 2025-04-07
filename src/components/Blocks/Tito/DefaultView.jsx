@@ -42,22 +42,12 @@ const TitoView = (props) => {
       window.tito =
         window.tito ||
         function () {
-          (tito.q = tito.q || []).push(arguments);
+          (tito.q = tito.q || []).push(arguments); // eslint-disable-line
         };
     }
   }, [loaded, event, tickets, discountCode]);
 
-  return (
-    <div id={'tito-wrapper'}>
-      {loaded && (
-        <tito-widget
-          event={event}
-          releases={tickets}
-          discount-code={discountCode}
-        ></tito-widget>
-      )}
-    </div>
-  );
+  return <div id={'tito-wrapper'}>{loaded && <tito-widget event={event} releases={tickets} discount-code={discountCode}></tito-widget>}</div>;
 };
 
 /**

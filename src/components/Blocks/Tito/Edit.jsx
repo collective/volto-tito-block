@@ -44,23 +44,12 @@ const TitoBlockEdit = (props) => {
   };
 
   return displayForm ? (
-    <EditForm
-      onKeyDown={onKeyDown}
-      onChange={onChange}
-      onSubmit={submitEvent}
-      onCancel={clearForm}
-      value={event}
-      invalidValue={hasError}
-    />
+    <EditForm onKeyDown={onKeyDown} onChange={onChange} onSubmit={submitEvent} onCancel={clearForm} value={event} invalidValue={hasError} />
   ) : (
     <>
       <TitoBlockView {...props} isEditMode />
       <SidebarPortal selected={selected}>
-        <TitoBlockData
-          data={data}
-          block={block}
-          onChangeBlock={onChangeBlock}
-        />
+        <TitoBlockData data={data} block={block} onChangeBlock={onChangeBlock} />
       </SidebarPortal>
     </>
   );
