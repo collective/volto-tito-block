@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
-// import './tito.css';
-
 const loadTiTo = (callback) => {
   const widgetId = 'TiTo';
   const scriptSrc = `https://js.tito.io/v2`;
@@ -11,9 +9,6 @@ const loadTiTo = (callback) => {
     callback(true);
   } else {
     if (callback) callback(false);
-    // window.titoWidgetCallback = function () {
-    //   window.TitoWidget.build_widgets = false;
-    // };
     const script = document.createElement('script');
     script.src = scriptSrc;
     script.id = widgetId;
@@ -44,10 +39,9 @@ const TitoView = (props) => {
 
   useEffect(() => {
     if (loaded && typeof window !== 'undefined') {
-      // window.TitoWidget.buildWidgets();
       window.tito =
         window.tito ||
-        function() {
+        function () {
           (tito.q = tito.q || []).push(arguments);
         };
     }
