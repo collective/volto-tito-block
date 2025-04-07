@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
-import './tito.css';
+import React, { useEffect, useState } from 'react';
 
 const loadTiTo = (callback) => {
   const widgetId = 'TiTo';
-  const scriptSrc = `https://js.tito.io/v1`;
+  const scriptSrc = `https://js.tito.io/v2`;
   const existingScript = document.getElementById(widgetId);
   if (existingScript && callback) {
     callback(true);
   } else {
     if (callback) callback(false);
-    window.titoWidgetCallback = function () {
-      window.TitoWidget.build_widgets = false;
-    };
     const script = document.createElement('script');
     script.src = scriptSrc;
     script.id = widgetId;
@@ -44,21 +39,15 @@ const TitoView = (props) => {
 
   useEffect(() => {
     if (loaded && typeof window !== 'undefined') {
-      window.TitoWidget.buildWidgets();
+      window.tito =
+        window.tito ||
+        function () {
+          (tito.q = tito.q || []).push(arguments); // eslint-disable-line
+        };
     }
   }, [loaded, event, tickets, discountCode]);
 
-  return (
-    <div id={'tito-wrapper'}>
-      {loaded && (
-        <tito-widget
-          event={event}
-          releases={tickets}
-          discount-code={discountCode}
-        ></tito-widget>
-      )}
-    </div>
-  );
+  return <div id={'tito-wrapper'}>{loaded && <tito-widget event={event} releases={tickets} discount-code={discountCode}></tito-widget>}</div>;
 };
 
 /**

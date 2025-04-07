@@ -24,35 +24,17 @@ const messages = defineMessages({
 });
 
 const EditForm = (props) => {
-  const {
-    value,
-    onChange,
-    onKeyDown,
-    onSubmit,
-    onCancel,
-    invalidValue,
-  } = props;
+  const { value, onChange, onKeyDown, onSubmit, onCancel, invalidValue } = props;
   const intl = useIntl();
   const error = invalidValue ? intl.formatMessage(messages.errorMessage) : null;
   return (
     <Message className="">
       <center>
-        <Icon
-          name={titoSVG}
-          className="blockIcon"
-          size={'50px'}
-          color={'blue'}
-        />
+        <Icon name={titoSVG} className="blockIcon" size={'50px'} color={'blue'} />
         <Header>{intl.formatMessage(messages.editFormHeader)}</Header>
       </center>
       <div className="input-wrapper">
-        <Input
-          error={error}
-          onKeyDown={onKeyDown}
-          onChange={onChange}
-          placeholder={intl.formatMessage(messages.editFormPlaceholder)}
-          value={value}
-        />
+        <Input error={error} onKeyDown={onKeyDown} onChange={onChange} placeholder={intl.formatMessage(messages.editFormPlaceholder)} value={value} />
         {value && (
           <Button.Group>
             <Button
