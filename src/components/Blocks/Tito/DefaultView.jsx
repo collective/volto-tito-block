@@ -11,9 +11,9 @@ const loadTiTo = (callback) => {
     callback(true);
   } else {
     if (callback) callback(false);
-    window.titoWidgetCallback = function () {
-      window.TitoWidget.build_widgets = false;
-    };
+    // window.titoWidgetCallback = function () {
+    //   window.TitoWidget.build_widgets = false;
+    // };
     const script = document.createElement('script');
     script.src = scriptSrc;
     script.id = widgetId;
@@ -44,7 +44,12 @@ const TitoView = (props) => {
 
   useEffect(() => {
     if (loaded && typeof window !== 'undefined') {
-      window.TitoWidget.buildWidgets();
+      // window.TitoWidget.buildWidgets();
+      window.tito =
+        window.tito ||
+        function() {
+          (tito.q = tito.q || []).push(arguments);
+        };
     }
   }, [loaded, event, tickets, discountCode]);
 
